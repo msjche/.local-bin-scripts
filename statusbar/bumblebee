@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if cat /proc/acpi/bbswitch | grep ON | awk '{print $2}'; then
+	echo ""
+fi

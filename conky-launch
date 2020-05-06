@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+function run {
+  if ! pgrep $1 ;
+  then
+    $@&
+  fi
+}
+
+pkill conky
+
+wait 1
+
+run "conky -c /home/msjche/.config/awesome/conky/conkyrcr.lua"
+sleep 3
+run "conky -c /home/msjche/.config/awesome/conky/conkyrcl.lua"
+#sleep 1
+#run "conky -c /home/msjche/.config/awesome/conky/conky-spotify/conky-spotify-medium"

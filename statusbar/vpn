@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if ifconfig tun0 | grep -q "00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"; then
+  echo VPN
+fi
